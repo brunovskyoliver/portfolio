@@ -16,6 +16,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
         }
       `}</style>
     </div>
+    
   );
 };
 
