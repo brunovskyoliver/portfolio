@@ -96,8 +96,8 @@ export default function Home(): JSX.Element {
   <div className='flex flex-row h-screen z-10'>
     <div className='flex justify-start p-14 w-1/2 z-10'>
       <div className=''>
-        <h1 data-value='Welcome' className='text-2xl md:text-3xl font-mono underline'>Welcome</h1>
-        <h2 className='text-xl md:text-2xl font-mono underline md:ml-14'>to my portfolio!</h2>
+        <h1 data-value='Welcome' className='text-2xl md:text-6xl font-mono underline font-extrabold '>Welcome</h1>
+        <h2 className='text-xl md:text-5xl font-mono underline md:ml-14'>to my portfolio!</h2>
       </div>
     </div>
     <div className='flex justify-end p-10 w-1/2 z-10'>
