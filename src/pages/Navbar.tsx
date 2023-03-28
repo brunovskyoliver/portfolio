@@ -5,12 +5,12 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="flex justify-center py-6">
-      <ul className="flex items-center space-x-4">
+    <nav className="flex justify-center py-6 z-10">
+      <ul className="flex items-center space-x-4 z-10">
         <li>
           <Link href="/">
             <div
-              className={`text-white cursor-pointer ${
+              className={`text-white cursor-pointer z-10 ${
                 router.pathname === '/' ? 'font-bold' : ''
               }`}
             >
@@ -21,7 +21,7 @@ const Navbar = () => {
         <li>
           <Link href="/About">
             <div
-              className={`text-white cursor-pointer ${
+              className={`text-white cursor-pointer z-10 ${
                 router.pathname === '/About' ? 'font-bold' : ''
               }`}
             >

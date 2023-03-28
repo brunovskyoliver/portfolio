@@ -1,5 +1,6 @@
 import Layout from './Layout';
 import { useEffect } from 'react';
+import Blob from './Blob';
 
 export default function About(): JSX.Element {  
     useEffect(() => {
@@ -49,8 +50,9 @@ export default function About(): JSX.Element {
       }, []);
   return (
     <Layout>
+      <Blob />
       <div className='flex flex-row h-screen'>
-        <div className='flex justify-start p-14 w-1/2'>
+        <div className='flex justify-start p-14 w-1/2 z-10'>
           <div className=''>
             <h1 data-value='Welcome' className='text-2xl md:text-3xl font-mono underline'>Welcome</h1>
             <h2 className='text-xl md:text-2xl font-mono underline md:ml-14'>my about page!</h2>

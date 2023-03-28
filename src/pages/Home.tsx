@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import React, { useEffect, useState } from 'react';
 import "../styles/Home.module.css";
+import Blob from './Blob';
 
 const API_KEY = '91b2738f684c1063b4e729983e657fbe';
 
@@ -90,16 +91,19 @@ export default function Home(): JSX.Element {
   
 
   return (
-  <div className='flex flex-row h-screen'>
-    <div className='flex justify-start p-14 w-1/2'>
+    <div>
+      <Blob />
+  <div className='flex flex-row h-screen z-10'>
+    <div className='flex justify-start p-14 w-1/2 z-10'>
       <div className=''>
         <h1 data-value='Welcome' className='text-2xl md:text-3xl font-mono underline'>Welcome</h1>
         <h2 className='text-xl md:text-2xl font-mono underline md:ml-14'>to my portfolio!</h2>
       </div>
     </div>
-    <div className='flex justify-end p-10 w-1/2'>
+    <div className='flex justify-end p-10 w-1/2 z-10'>
       {renderWeatherInfo()}
     </div>
+  </div>
   </div>
   );
 }
