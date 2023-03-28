@@ -22,7 +22,7 @@ body {
     background-color: white;
     height: 34vmax;
     aspect-ratio: 1;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     translate: -50% -50%;

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Layout from './Layout';
 import Home from './Home';
 import About from './About';
+import Login from './Login';
 import Blob from './Blob';
 
 
@@ -12,6 +13,7 @@ const Index = () => {
     <Layout>
       <Home />
       <About />
+      <Login />
     </Layout>
   );
 };
