@@ -77,32 +77,43 @@ export default function Home(): JSX.Element {
 
   const renderWeatherInfo = () => {
     if (!weatherData || !weatherData.main) {
-      return <p className='text-2x1 font-mono ml-14'>Loading weather data...</p>;
+      return (
+        <p className="text-2x1 font-mono ml-4 md:ml-14">
+          Loading weather data...
+        </p>
+      );
     }
     return (
-      <>
-      <div className="flex mt-15">
-        <p className='text-2x1 font-mono ml-14'>Current temperature: {weatherData.main.temp}°C</p>
-        <p className='text-2x1 font-mono ml-14'>Feels like: {weatherData.main.feels_like}°C</p>
+      <div className="flex flex-col md:flex-row md:mt-15">
+        <p className="text-2x1 font-mono ml-4 md:ml-14">
+          Current temperature: {weatherData.main.temp}°C
+        </p>
+        <p className="text-2x1 font-mono ml-4 md:ml-14">
+          Feels like: {weatherData.main.feels_like}°C
+        </p>
       </div>
-      </>
     );
   };
   
-
   return (
-    <div>
-  <div className='flex flex-row h-screen z-10'>
-    <div className='flex justify-start p-14 w-1/2 z-10'>
-      <div className=''>
-        <h1 data-value='Welcome' className='text-2xl md:text-3xl font-mono underline'>Welcome</h1>
-        <h2 className='text-xl md:text-2xl font-mono underline md:ml-14'>to my portfolio!</h2>
+    <div className="flex flex-col md:flex-row h-screen z-10">
+      <div className="flex justify-start p-4 md:p-14 w-full md:w-1/2 z-10">
+        <div className="">
+          <h1
+            data-value="Welcome"
+            className="text-2xl md:text-3xl font-mono underline"
+          >
+            Welcome
+          </h1>
+          <h2 className="text-xl md:text-2xl font-mono underline md:ml-14">
+            to my portfolio!
+          </h2>
+        </div>
+      </div>
+      <div className="flex justify-end p-4 md:p-10 w-full md:w-1/2 z-10">
+        {renderWeatherInfo()}
       </div>
     </div>
-    <div className='flex justify-end p-10 w-1/2 z-10'>
-      {renderWeatherInfo()}
-    </div>
-  </div>
-  </div>
   );
+  
 }
