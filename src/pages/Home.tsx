@@ -92,7 +92,6 @@ export default function Home(): JSX.Element {
 
   return (
     <div>
-      <Blob />
   <div className='flex flex-row h-screen z-10'>
     <div className='flex justify-start p-14 w-1/2 z-10'>
       <div className=''>

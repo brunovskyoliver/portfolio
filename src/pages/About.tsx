@@ -50,7 +50,6 @@ export default function About(): JSX.Element {
       }, []);
   return (
     <Layout>
-      <Blob />
       <div className='flex flex-row h-screen'>
         <div className='flex justify-start p-14 w-1/2 z-10'>
           <div className=''>
