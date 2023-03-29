@@ -11,7 +11,6 @@ import Footer from './Footer';
 const Index = () => {
   return (
     <Layout>
-      <Footer />
       <Home />
       <About />
     </Layout>
