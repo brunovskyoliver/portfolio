@@ -9,7 +9,7 @@ export default function ContactMe(): JSX.Element {
             <div className="origin-center transform-none absolute z-10 top-0 bottom-0 left-15vw w-0.5 bg-light flex flex-col items-center ml-8">
                 <div className="transform-none absolute top-18 w-3 h-3 rounded-full bg-dark z-10 border border-solid border-comment"></div>
             </div>
-            <div className='flex flex-col p-4 md:pt-16 ml-[calc(1vw+3rem)] z-10 font-mono'>
+            <div className='flex flex-col p-4 md:pt-16 md:ml-[calc(0rem+3.6rem)] ml-8 z-10 font-mono'>
                 <div className='block text-sm md:text-xl z-10 text-comment '>
                     <a>brunovsky.oliver@gmail.com /{'>'}</a>
                 </div>
