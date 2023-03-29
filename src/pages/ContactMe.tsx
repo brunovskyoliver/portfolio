@@ -115,7 +115,7 @@ export default function ContactMe(): JSX.Element {
                         <span className='text-green'>{"'body'"}</span>
                         {': '}
                             <form className='absolute inline'>
-                                <textarea className='ml-4 resize-none absolute inline bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none' placeholder="Input the body" cols={25} rows={7}/>
+                                <textarea className='ml-4 overflow-hidden resize-none absolute inline bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none' placeholder="Input the body" cols={25} rows={7}/>
                                 </form>
                     </span>
                 </div>
