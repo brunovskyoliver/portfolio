@@ -29,6 +29,17 @@ const Navbar = () => {
             </div>
           </Link>
         </li>
+        <li>
+          <Link href="/ContactMe">
+            <div
+              className={`text-white cursor-pointer z-10 ${
+                router.pathname === '/ContactMe' ? 'font-bold' : ''
+              }`}
+            >
+              Contact
+            </div>
+          </Link>
+        </li>
       </ul>
 
       <style jsx>{`

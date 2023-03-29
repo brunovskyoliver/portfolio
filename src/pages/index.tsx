@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About';
 import Blob from './Blob';
 import Footer from './Footer';
+import ContactMe from './ContactMe';
 
 
 
@@ -13,6 +14,7 @@ const Index = () => {
     <Layout>
       <Home />
       <About />
+      <ContactMe />
     </Layout>
   );
 };

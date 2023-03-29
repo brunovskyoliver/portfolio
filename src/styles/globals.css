@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 :root {
+  --dark: #282C34;
+    --darker: #17191d;
+    --light: #abb2bf;
+    --comment: #abb2bfaa;
+    --lightComment: #abb2bf10;
+    --backgroundComment: #abb2bf11;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
