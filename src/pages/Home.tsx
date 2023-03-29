@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import React, { useEffect, useState } from 'react';
 import "../styles/Home.module.css";
 import Blob from './Blob';
+import Layout from './Layout';
 
 const API_KEY = '91b2738f684c1063b4e729983e657fbe';
 

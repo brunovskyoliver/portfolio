@@ -50,10 +50,10 @@ export default function About(): JSX.Element {
       }, []);
   return (
     <Layout>
-  <div className='flex flex-col h-screen md:flex-row'>
-    <div className='flex justify-start p-4 md:p-14 w-full md:w-1/2 z-10'>
+  <div className='flex flex-col md:flex-row h-screen z-10'>
+    <div className='flex justify-center md:justify-start p-4 md:p-14 w-full md:w-1/2 z-10'>
       <div className=''>
-        <h1 data-value='Welcome' className='text-2xl md:text-3xl font-mono underline'>Welcome</h1>
+        <h1 data-value='Welcome' className='text-2xl md:text-3xl font-mono underline flex items-center justify-center md:justify-start'>Welcome</h1>
         <h2 className='text-xl md:text-2xl font-mono underline md:ml-14'>my about page!</h2>
       </div>
     </div>
