@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import Blob from './Blob';
-
+import Footer from './Footer';
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -10,6 +10,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
     <div>
       <Navbar />
       <Blob />
+      
       <main>{children}</main>
 
       <style jsx>{`

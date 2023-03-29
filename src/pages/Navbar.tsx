@@ -29,17 +29,6 @@ const Navbar = () => {
             </div>
           </Link>
         </li>
-        <li>
-          <Link href="/Login">
-            <div
-              className={`text-white cursor-pointer z-10 ${
-                router.pathname === '/Login' ? 'font-bold' : ''
-              }`}
-            >
-              Login
-            </div>
-          </Link>
-        </li>
       </ul>
 
       <style jsx>{`

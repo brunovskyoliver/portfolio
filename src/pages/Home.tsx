@@ -85,10 +85,10 @@ export default function Home(): JSX.Element {
     }
     return (
       <div className="flex flex-col md:flex-row md:mt-15">
-        <p className="text-2x1 font-mono ml-4 md:ml-14">
+        <p className="text-2x1 font-mono text-center md:ml-14">
           Current temperature: {weatherData.main.temp}°C
         </p>
-        <p className="text-2x1 font-mono ml-4 md:ml-14">
+        <p className="text-2x1 font-mono text-center md:ml-14">
           Feels like: {weatherData.main.feels_like}°C
         </p>
       </div>
@@ -108,7 +108,7 @@ export default function Home(): JSX.Element {
           </h2>
         </div>
       </div>
-      <div className="flex justify-end p-4 md:p-10 w-full md:w-1/2 z-10">
+      <div className="flex justify-center md:justify-end p-8 md:p-10 w-full md:w-1/2 z-10">
         {renderWeatherInfo()}
       </div>
     </div>
