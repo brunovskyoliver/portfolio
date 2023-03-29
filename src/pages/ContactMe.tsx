@@ -16,7 +16,7 @@ export default function ContactMe(): JSX.Element {
             </div>
             <div className='block transform-none mt-4 md:mt-12 box-border p-0 w-full'>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
-                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-50'>00</span>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>00</span>
                     <span className='md:ml-8 ml-4 flex-1'>
                         <span className='text-purple'>class</span>
                         <span className='text-yellow'> ContactMe</span>
@@ -24,7 +24,7 @@ export default function ContactMe(): JSX.Element {
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
-                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-50'>01</span>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>01</span>
                     <span className='md:ml-8 ml-4 flex-1'>
                         <span className='hidden md:inline text-comment opacity-50'>..</span>
                         <span className='text-purple'>constructor</span>
@@ -32,7 +32,7 @@ export default function ContactMe(): JSX.Element {
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
-                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-50'>02</span>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>02</span>
                     <span className='md:ml-8 ml-4 flex-1'>
                         <span className='hidden md:inline text-comment opacity-50'>....</span>
                         <span className='text-red'>this</span>
@@ -41,12 +41,110 @@ export default function ContactMe(): JSX.Element {
                         {' = '}
                         <span className='text-green'>
                             {"'"}
-                            <span className='inline-block w-5.5'>
-                                <input type="text" className="bg-dark text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your name" maxLength={15} />
+                            <span className='inline-block w-7.25 md:w-5.5'>
+                                <input type="text" className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your name" maxLength={16} />
                             </span>
                             {"'"}
                         </span>
                         {';'}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>03</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>....</span>
+                        <span className='text-red'>this</span>
+                        {'.'}
+                        <span className='text-blue'>email</span>
+                        {' = '}
+                        <span className='text-green'>
+                            {"'"}
+                            <span className='inline-block w-7.25 md:w-5.5'>
+                                <input type="text" className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your email" />
+                            </span>
+                            {" '"}
+                        </span>
+                        {';'}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>04</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>..</span>
+                        {"}"}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>05</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>..</span>
+                        <span className='text-yellow'>emailBody</span>
+                        {'()'}
+                        {' {'}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>06</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>....</span>
+                        <span className='text-purple'>return</span>
+                        {' {'}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>07</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>......</span>
+                        <span className='text-green'>{"'subject'"}</span>
+                        {': '}
+                        <span className='text-green'>
+                            {"'"}
+                            </span>
+                        <span className='inline-block w-8.25 md:w-36'>
+                                <input type="text" className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input the subject" />
+                            </span>
+                            <span className='text-green'>
+                            {"'"}
+                            </span>
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>08</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>......</span>
+                        <span className='text-green'>{"'body'"}</span>
+                        {': '}
+                            <form className='absolute inline'>
+                                <textarea className='ml-4 resize-none absolute inline bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none' placeholder="Input the body" cols={25} rows={7}/>
+
+                                </form>
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>09</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>....</span>
+                        {"}"}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>10</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        <span className='hidden md:inline text-comment opacity-50'>..</span>
+                        {"}"}
+
+                    </span>
+                </div>
+                <div className='flex flex-row text-sm md:text-xl font-mono'>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>09</span>
+                    <span className='md:ml-8 ml-4 flex-1'>
+                        {"}"}
 
                     </span>
                 </div>
