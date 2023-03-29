@@ -5,7 +5,7 @@ import Blob from './Blob';
 export default function ContactMe(): JSX.Element {  
   return (
     <Layout>
-        <div className="block relative m-0 p-0 min-h-[calc(100vh-12rem)] z-10 bg-dark rounded-3xl">
+        <div className="block relative m-0 p-0 md:min-h-[calc(100vh-12rem)] min-h-[calc(100vh-16rem)] z-10 bg-dark rounded-3xl">
             <div className="origin-center transform-none absolute z-10 top-0 bottom-0 left-15vw w-0.5 bg-light flex flex-col items-center ml-8">
                 <div className="transform-none absolute top-18 w-3 h-3 rounded-full bg-dark z-10 border border-solid border-comment"></div>
             </div>
