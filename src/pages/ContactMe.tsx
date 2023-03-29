@@ -42,12 +42,11 @@ export default function ContactMe(): JSX.Element {
                         <span className='text-green'>
                             {"'"}
                             <span className='inline-block w-7.25 md:w-5.5'>
-                                <input type="text" className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your name" maxLength={16} />
+                                <input type="text" autoComplete='off' className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your name" maxLength={16} />
                             </span>
                             {"'"}
                         </span>
                         {';'}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
@@ -61,12 +60,11 @@ export default function ContactMe(): JSX.Element {
                         <span className='text-green'>
                             {"'"}
                             <span className='inline-block w-7.25 md:w-5.5'>
-                                <input type="text" className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your email" />
+                                <input type="text" autoComplete='off' className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your email" />
                             </span>
                             {" '"}
                         </span>
                         {';'}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
@@ -74,7 +72,6 @@ export default function ContactMe(): JSX.Element {
                     <span className='md:ml-8 ml-4 flex-1'>
                         <span className='hidden md:inline text-comment opacity-50'>..</span>
                         {"}"}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
@@ -84,7 +81,6 @@ export default function ContactMe(): JSX.Element {
                         <span className='text-yellow'>emailBody</span>
                         {'()'}
                         {' {'}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
@@ -93,7 +89,6 @@ export default function ContactMe(): JSX.Element {
                         <span className='hidden md:inline text-comment opacity-50'>....</span>
                         <span className='text-purple'>return</span>
                         {' {'}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
@@ -106,7 +101,7 @@ export default function ContactMe(): JSX.Element {
                             {"'"}
                             </span>
                         <span className='inline-block w-8.25 md:w-36'>
-                                <input type="text" className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input the subject" />
+                                <input type="text" autoComplete='off' className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input the subject" />
                             </span>
                             <span className='text-green'>
                             {"'"}
@@ -121,7 +116,6 @@ export default function ContactMe(): JSX.Element {
                         {': '}
                             <form className='absolute inline'>
                                 <textarea className='ml-4 resize-none absolute inline bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none' placeholder="Input the body" cols={25} rows={7}/>
-
                                 </form>
                     </span>
                 </div>
@@ -130,7 +124,6 @@ export default function ContactMe(): JSX.Element {
                     <span className='md:ml-8 ml-4 flex-1'>
                         <span className='hidden md:inline text-comment opacity-50'>....</span>
                         {"}"}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
@@ -138,17 +131,29 @@ export default function ContactMe(): JSX.Element {
                     <span className='md:ml-8 ml-4 flex-1'>
                         <span className='hidden md:inline text-comment opacity-50'>..</span>
                         {"}"}
-
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
                     <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>11</span>
                     <span className='md:ml-8 ml-4 flex-1'>
                         {"}"}
-
                     </span>
                 </div>
 
+            </div>
+            <div className='flex flex-col gap-4 ml-12 md:ml-[calc(1vw+3rem)] mt-4 z-10 md:mt-12'>
+                <span className='flex md:w-auto w-28 flex-row items-center gap-4'>
+                    <div className='border-2 border-solid border-light w-40 h-12 rounded-lg flex flex-row gap-3 justify-center items-center cursor-pointer font-mono'>
+                        <span className='text-light'>
+                            Send E-mail
+                        </span>
+                        <span className='hidden md:flex'>
+                        <svg className='opacity-50' stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path>
+    </svg>
+                        </span>
+                    </div>
+                </span>
             </div>
         </div>
     </Layout>
