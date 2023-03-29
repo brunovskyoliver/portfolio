@@ -142,7 +142,7 @@ export default function ContactMe(): JSX.Element {
                     </span>
                 </div>
                 <div className='flex flex-row text-sm md:text-xl font-mono'>
-                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>09</span>
+                    <span className='mr-4 ml-1 font-light text-right color-comment opacity-20'>11</span>
                     <span className='md:ml-8 ml-4 flex-1'>
                         {"}"}
 
