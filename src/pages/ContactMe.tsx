@@ -145,7 +145,7 @@ export default function ContactMe(): JSX.Element {
                 <span className='flex md:w-auto w-12 flex-row items-center gap-4'>
                     <div className='border-2 border-solid border-light w-40 h-12 rounded-lg flex flex-row gap-3 justify-center items-center cursor-pointer font-mono'>
                         <span className='text-light hidden md:block'>
-                            Send E-mail
+                            Send E-Mail
                         </span>
                         <span className='flex'>
                         <svg className='opacity-50' stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
