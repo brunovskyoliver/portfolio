@@ -64,6 +64,7 @@ export default function Home(): JSX.Element {
       const response = await fetch("http://www.boredapi.com/api/activity/");
       const data: { activity: string } = await response.json();
       setActivity(data.activity);
+      console.log(data.activity);
     };
 
     fetchActivity();
