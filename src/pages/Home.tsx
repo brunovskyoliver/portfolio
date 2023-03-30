@@ -5,6 +5,9 @@ import Blob from './Blob';
 import Layout from './Layout';
 
 const API_KEY = '91b2738f684c1063b4e729983e657fbe';
+interface QuoteData {
+  content: string;
+}
 
 export default function Home(): JSX.Element {
   const [weatherData, setWeatherData] = useState<any>(null);
@@ -29,6 +32,45 @@ export default function Home(): JSX.Element {
 
     getLocation();
   }, []);
+
+  const [quote, setQuote] = useState<string>("");
+
+  useEffect(() => {
+    const fetchQuote = async () => {
+      const storedTimestamp = localStorage.getItem("quoteTimestamp");
+      const timestamp = Date.now();
+
+      if (!storedTimestamp || timestamp - parseInt(storedTimestamp) > 86400000) {
+        const response = await fetch("https://api.quotable.io/random?maxLength=60");
+        const data: QuoteData = await response.json();
+        setQuote(data.content);
+        localStorage.setItem("quoteTimestamp", timestamp.toString());
+        localStorage.setItem("quoteContent", data.content);
+      } else {
+        const storedQuote = localStorage.getItem("quoteContent");
+        if (storedQuote) { // Add null check
+          setQuote(storedQuote);
+        }
+      }
+    };
+
+    fetchQuote();
+  }, []);
+
+  const [activity, setActivity] = useState<string>("");
+
+  useEffect(() => {
+    const fetchActivity = async () => {
+      const response = await fetch("http://www.boredapi.com/api/activity/");
+      const data: { activity: string } = await response.json();
+      setActivity(data.activity);
+    };
+
+    fetchActivity();
+  }, []);
+
+  
+
 
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -104,10 +146,19 @@ export default function Home(): JSX.Element {
 
             Welcome
           </h1>
-          <h2 className="text-xl md:text-2xl font-mono underline md:ml-14">
+          <h2 className="text-xl md:text-2xl font-mono text-center md:text-start underline md:ml-14">
             to my portfolio!
           </h2>
+          <div className="flex mt-12 text-base font-mono">
+          <h1>Quote of the day:</h1>
+          <div className="ml-4">{quote}</div>
         </div>
+        <div className="flex mt-12 text-base font-mono">
+          <h1>Random activity 4 u:</h1>
+          <div className="ml-4">{activity}</div>
+        </div>
+        </div>
+        
       </div>
       <div className="flex justify-center md:justify-end p-8 md:p-10 w-full md:w-1/2 z-10">
         {renderWeatherInfo()}
