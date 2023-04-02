@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import "../styles/Home.module.css";
 import Blob from './Blob';
 import Layout from './Layout';
+import Footer from './Footer';
 
 const API_KEY = '91b2738f684c1063b4e729983e657fbe';
 interface QuoteData {
@@ -39,20 +40,22 @@ export default function Home(): JSX.Element {
     const fetchQuote = async () => {
       const storedTimestamp = localStorage.getItem("quoteTimestamp");
       const timestamp = Date.now();
-
+    
       if (!storedTimestamp || timestamp - parseInt(storedTimestamp) > 86400000) {
-        const response = await fetch("https://api.quotable.io/random?maxLength=60");
-        const data: QuoteData = await response.json();
-        setQuote(data.content);
+        const response = await fetch("/api/quote");
+        const data: { quote: string } = await response.json();
+        setQuote(data.quote);
         localStorage.setItem("quoteTimestamp", timestamp.toString());
-        localStorage.setItem("quoteContent", data.content);
+        localStorage.setItem("quoteContent", data.quote);
       } else {
         const storedQuote = localStorage.getItem("quoteContent");
-        if (storedQuote) { // Add null check
+        if (storedQuote) {
           setQuote(storedQuote);
         }
       }
     };
+    
+    
 
     fetchQuote();
   }, []);
@@ -64,7 +67,6 @@ export default function Home(): JSX.Element {
       const response = await fetch("https://www.boredapi.com/api/activity/");
       const data: { activity: string } = await response.json();
       setActivity(data.activity);
-      console.log(data.activity);
     };
 
     fetchActivity();
@@ -140,7 +142,9 @@ export default function Home(): JSX.Element {
   };
   
   return (
-    <div className="flex flex-col md:flex-row h-screen z-10">
+    <div>
+    <div className='h-fit'>
+    <div className="flex flex-col md:flex-row z-10">
       <div className="flex justify-center md:justify-start p-4 md:p-14 w-full md:w-1/2 z-10">
         <div className="">
           <h1 data-value="Welcome" className="text-2xl md:w-fit md:text-3xl font-mono underline flex items-center justify-center md:justify-start">
@@ -164,7 +168,11 @@ export default function Home(): JSX.Element {
       <div className="flex justify-center md:justify-end p-8 md:p-10 w-full md:w-1/2 z-10">
         {renderWeatherInfo()}
       </div>
+      
     </div>
+    </div>
+    </div>
+
   );
   
   

@@ -1,6 +1,7 @@
 import Layout from './Layout';
 import { useEffect } from 'react';
 import Blob from './Blob';
+import Footer from './Footer';
 
 export default function About(): JSX.Element {  
     useEffect(() => {

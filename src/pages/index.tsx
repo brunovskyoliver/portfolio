@@ -13,8 +13,6 @@ const Index = () => {
   return (
     <Layout>
       <Home />
-      <About />
-      <ContactMe />
     </Layout>
   );
 };
