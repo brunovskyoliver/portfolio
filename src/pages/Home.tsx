@@ -143,7 +143,7 @@ export default function Home(): JSX.Element {
   
   return (
     <div>
-    <div className='h-fit'>
+    <div className='h-full'>
     <div className="flex flex-col md:flex-row z-10">
       <div className="flex justify-center md:justify-start p-4 md:p-14 w-full md:w-1/2 z-10">
         <div className="">
