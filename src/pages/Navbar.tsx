@@ -6,6 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-center py-6 z-10">
+      
       <ul className="flex items-center space-x-4 z-10">
         <li>
           <Link href="/">

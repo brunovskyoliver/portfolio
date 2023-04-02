@@ -8,6 +8,9 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div>
+      <audio autoPlay loop>
+        <source src="./bgmusic.mp3" type="audio/mpeg"/>
+      </audio>
       <Footer />
       <Navbar />
       <Blob />
