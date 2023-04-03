@@ -2,14 +2,20 @@ import {
   ClerkProvider,
   SignedIn,
   SignedOut,
+  SignIn,
   RedirectToSignIn,
+  SignUp
 } from "@clerk/nextjs";
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import "./Blob.css"
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import "./Blob.css";
 import { useRouter } from "next/router";
+import SignInPage from "./SignInPage";
 
-const publicPages = ["/SignInPage/[[...index]]", "/SignUpPage/[[...index]]"];
+const publicPages = [
+  "/SignInPage/[[...index]]",
+  "/SignUpPage/[[...index]]",
+];
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
@@ -18,7 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
   const isPublicPage = publicPages.includes(pathname);
 
   return (
-    <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API} apiKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} {...pageProps}>
+    <ClerkProvider
+      frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}
+      apiKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      {...pageProps}
+    >
       {isPublicPage ? (
         <Component {...pageProps} />
       ) : (
@@ -27,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </SignedIn>
           <SignedOut>
-            <RedirectToSignIn />
+          <Component {...pageProps} />
           </SignedOut>
         </>
       )}

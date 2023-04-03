@@ -131,3 +131,9 @@ a {
 .cl-userButtonPopoverFooter {
   display: none;
 }
+.cl-dividerRow {
+  display: none;
+}
+.cl-form {
+  display: none;
+}
