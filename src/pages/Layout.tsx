@@ -1,6 +1,13 @@
 import Navbar from './Navbar';
 import Blob from './Blob';
 import Footer from './Footer';
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton
+} from "@clerk/nextjs";
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -14,6 +21,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Footer />
       <Navbar />
       <Blob />
+      
       
       <main>{children}</main>
 
