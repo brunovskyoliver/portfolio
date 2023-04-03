@@ -6,7 +6,7 @@ This is a personal portfolio website built with Next.js, showcasing my skills, e
 
 ### Prerequisites
 
-To run this project locally, you need to have Node.js and npm (or yarn) installed on your machine.
+To run this project locally, you need to have [Node.js](https://nodejs.org/en) and [npm](https://www.npmjs.com/) (or yarn) installed on your machine.
 
 ### Installation
 
@@ -19,7 +19,7 @@ To run this project locally, you need to have Node.js and npm (or yarn) installe
 
 You can customize the content and styles of the website by modifying the files under the `src` directory. Here's an overview of the main files:
 
-- `src/pages/*`: the pages of the website, written in JSX and using Next.js routing. You can add, remove, or modify pages as needed.
+- `src/pages/*`: the pages of the website, written in TSX and using Next.js routing. You can add, remove, or modify pages as needed.
 - `src/styles/*`: global CSS styles used by the website, such as colors, fonts, etc. You can modify these styles to fit your branding. I recommend using [Tailwind CSS](https://tailwindcss.com/) for this.
 - `public/*`: static assets used by the website, such as images and fonts. You can add your own assets to this directory.
 
