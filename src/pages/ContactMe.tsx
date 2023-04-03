@@ -1,8 +1,11 @@
 import Layout from './Layout';
 import { useEffect } from 'react';
 import Blob from './Blob';
+import { useUser } from '@clerk/nextjs';
 
-export default function ContactMe(): JSX.Element {  
+
+export default function ContactMe(): JSX.Element {
+    const { user } = useUser();  
   return (
     <Layout>
         <div className="block relative m-0 p-0 md:min-h-[calc(100vh-12rem)] min-h-[calc(100vh-16rem)] z-10 bg-dark rounded-3xl">
@@ -41,8 +44,8 @@ export default function ContactMe(): JSX.Element {
                         {' = '}
                         <span className='text-green'>
                             {"'"}
-                            <span className='inline-block w-7.25 md:w-5.5'>
-                                <input type="text" autoComplete='off' className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your name" maxLength={16} />
+                            <span className='inline w-7.25 md:w-5.5'>
+                                <span>{user ? user.fullName : "Guest"}</span>
                             </span>
                             {"'"}
                         </span>
@@ -59,10 +62,10 @@ export default function ContactMe(): JSX.Element {
                         {' = '}
                         <span className='text-green'>
                             {"'"}
-                            <span className='inline-block w-7.25 md:w-5.5'>
-                                <input type="text" autoComplete='off' className="bg-transparent text-sm md:text-xl text-green font-mono border-0 outline-none" placeholder="Input your email" />
+                            <span className='inline w-7.25 md:w-5.5'>
+                            <span>{user?.primaryEmailAddress?.emailAddress ?? "N/A"}</span>
                             </span>
-                            {" '"}
+                            {"'"}
                         </span>
                         {';'}
                     </span>
