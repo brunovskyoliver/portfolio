@@ -45,7 +45,7 @@ export default function ContactMe(): JSX.Element {
                         <span className='text-green'>
                             {"'"}
                             <span className='inline w-7.25 md:w-5.5'>
-                                <span>{user ? user.fullName : "Guest"}</span>
+                                <span>{user ? user.fullName : "Please login in order to continue"}</span>
                             </span>
                             {"'"}
                         </span>
