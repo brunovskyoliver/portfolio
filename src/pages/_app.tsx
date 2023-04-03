@@ -10,7 +10,6 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import "./Blob.css";
 import { useRouter } from "next/router";
-import SignInPage from "./SignInPage";
 
 const publicPages = [
   "/SignInPage/[[...index]]",
