@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isPublicPage = publicPages.includes(pathname);
 
   return (
-    <ClerkProvider {...pageProps}>
+    <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API} apiKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} {...pageProps}>
       {isPublicPage ? (
         <Component {...pageProps} />
       ) : (
