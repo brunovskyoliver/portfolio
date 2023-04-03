@@ -2,6 +2,7 @@ import Layout from './Layout';
 import { useEffect } from 'react';
 import Blob from './Blob';
 import Footer from './Footer';
+import Head from 'next/head'
 
 export default function About(): JSX.Element {  
     useEffect(() => {
@@ -51,6 +52,9 @@ export default function About(): JSX.Element {
       }, []);
   return (
     <Layout>
+      <Head>
+        <title>About - brunovsky.online</title>
+      </Head>
   <div className='flex flex-col md:flex-row h-screen z-10'>
     <div className='flex justify-center md:justify-start p-4 md:p-14 w-full md:w-1/2 z-10'>
       <div className=''>
