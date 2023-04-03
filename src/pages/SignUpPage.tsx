@@ -16,6 +16,7 @@ export default function SignUpPage(): JSX.Element {
       "cl-signUp-root": "z-10 relative",
     },
   }}
+  redirectUrl={"/"}
 />
 </div>
   </Layout>

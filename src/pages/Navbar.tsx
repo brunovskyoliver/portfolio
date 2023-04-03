@@ -62,6 +62,19 @@ const Navbar = () => {
             </div>
           </Link>
         </li>
+        <li>
+          <Link href="/SignInPage">
+            <div
+              className={`text-white cursor-pointer z-10 ${
+                router.pathname === '/SignInPage' ? 'font-bold' : ''
+              }`}
+            >
+              <SignedOut>
+        Sign In
+      </SignedOut>
+            </div>
+          </Link>
+        </li>
         </ul>
         </div>
         <SignedIn>
