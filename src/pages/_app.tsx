@@ -20,7 +20,6 @@ const publicPages = [
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
-  // Check if the current route matches a public page
   const isPublicPage = publicPages.includes(pathname);
 
   return (
