@@ -35,7 +35,7 @@ You can deploy this website to various platforms, such as Vercel, Netlify, or AW
 ## Built With
 
 - [Next.js](https://nextjs.org/) - The web framework used
-- [React](https://reactjs.org/) - The JavaScript library used
+- [React](https://reactjs.org/) - The TypeScript library used
 - [Tailwind CSS](https://tailwindcss.com/) - The CSS framework used
 - [GitHub](https://github.com/) - The version control system used
 
