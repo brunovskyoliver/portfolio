@@ -57,7 +57,7 @@ const Navbar = () => {
               }`}
             >
               <SignedOut>
-        Sign In
+        Sign Up
       </SignedOut>
             </div>
           </Link>
