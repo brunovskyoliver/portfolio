@@ -25,7 +25,7 @@ You can customize the content and styles of the website by modifying the files u
 
 ### Deployment
 
-You can deploy this website to various platforms, such as Vercel, Netlify, or AWS. Here's an example deployment process for Vercel:
+You can deploy this website to various platforms, such as Vercel, Netlify, or AWS. Here's an example deployment process for [Vercel](https://vercel.com/):
 
 1. Sign up for a Vercel account and link it to your GitHub repository.
 2. Create a new project on Vercel and configure the deployment settings.
