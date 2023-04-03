@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isPublicPage = publicPages.includes(pathname);
 
   return (
-    <ClerkProvider {...pageProps} frontendApi="workable-gar-37.clerk.accounts.dev">
+    <ClerkProvider {...pageProps}>
       {isPublicPage ? (
         <Component {...pageProps} />
       ) : (
