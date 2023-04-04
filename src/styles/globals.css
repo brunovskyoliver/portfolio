@@ -100,13 +100,13 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(255, 255, 255);
   background: linear-gradient(
       to bottom right,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(220, 220, 220)
     )
-    rgb(var(--background-start-rgb));
+    rgb(0, 0, 0);
 }
 
 a {
