@@ -5,11 +5,20 @@ import {
   SignedIn,
   SignedOut,
   SignInButton,
-  UserButton
+  UserButton,
+  useUser,
 } from "@clerk/nextjs";
 
 const Navbar = () => {
   const router = useRouter();
+  const {user} = useUser();
+  const orgId = "org_2NwqhR3YqilSddAl89q4g9dcRMY";
+  const isUserInOrganization = user?.organizationMemberships.some(membership => membership.organization.id === orgId);
+  if (isUserInOrganization) {
+    console.log("User is in organization");
+  }
+  
+
 
   return (
     <nav className="flex justify-center py-6 z-10">
@@ -49,6 +58,7 @@ const Navbar = () => {
             </div>
           </Link>
         </li>
+        <SignedOut>
         <li>
           <Link href="/SignUpPage">
             <div
@@ -56,12 +66,13 @@ const Navbar = () => {
                 router.pathname === '/SignUpPage' ? 'font-bold' : ''
               }`}
             >
-              <SignedOut>
+              
         Sign Up
-      </SignedOut>
             </div>
           </Link>
         </li>
+        </SignedOut>
+        <SignedOut>
         <li>
           <Link href="/SignInPage">
             <div
@@ -69,17 +80,29 @@ const Navbar = () => {
                 router.pathname === '/SignInPage' ? 'font-bold' : ''
               }`}
             >
-              <SignedOut>
         Sign In
-      </SignedOut>
             </div>
           </Link>
         </li>
-        </ul>
-        </div>
+        </SignedOut>
         <SignedIn>
+        <li>
+        { isUserInOrganization ?
+          <Link href="/Notes">
+            <div
+              className={`text-white cursor-pointer z-10 ${
+                router.pathname === '/Notes' ? 'font-bold' : ''
+              }`}
+            >
+              Notes
+            </div>
+          </Link> : null}
+          </li>
+          <li>
         <UserButton />
+        </li>
       </SignedIn>
+      </ul>
       
 
       <style jsx>{`
@@ -87,6 +110,7 @@ const Navbar = () => {
           width: 100%;
         }
       `}</style>
+      </div>
     </nav>
   );
 };
