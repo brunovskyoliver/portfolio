@@ -23,6 +23,7 @@ export default function Notes(): JSX.Element {
       <Head>
         <title>Notes - brunovsky.online</title>
       </Head>
+      
 
   </Layout>
   );
