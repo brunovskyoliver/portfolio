@@ -174,10 +174,6 @@ export default function Home(): JSX.Element {
     </div>
     </div>
     </section>
-    <section className='relative z-10'>
-    <div className="flex w-full z-10 h-96">
-      </div>
-    </section>
     </main>
 
   );
