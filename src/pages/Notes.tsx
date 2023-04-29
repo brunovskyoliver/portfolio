@@ -27,26 +27,26 @@ export default function Notes(): JSX.Element {
           <div className="flex flex-row overflow-hidden rounded-2xl w-full h-60 bg-gray">
             <div className=" overflow-hidden w-1/3 flex flex-col ">
               <div className="h-1/2 w-full justify-center text-center flex items-center">
-                <p className="text-2x1 font-mono">A</p>
+                <p className="text-2x1 font-mono">Biológia</p>
               </div>
               <div className="h-1/2 w-full justify-center text-center flex items-center">
-              <p className="text-2x1 font-mono">A</p>
+              <p className="text-2x1 font-mono">Slovenčina</p>
               </div>
             </div>
             <div className=" overflow-hidden w-1/3 flex flex-col">
             <div className="h-1/2 w-full justify-center text-center flex items-center">
-            <p className="text-2x1 font-mono">A</p>
+            <p className="text-2x1 font-mono">Nemčina</p>
             </div>
             <div className="h-1/2 w-full justify-center text-center flex items-center">
-            <p className="text-2x1 font-mono">A</p>
+            <p className="text-2x1 font-mono">Matematika</p>
             </div>
             </div>
             <div className=" overflow-hidden w-1/3 flex flex-col ">
             <div className="h-1/2 w-full justify-center text-center flex items-center">
-            <p className="text-2x1 font-mono">A</p>
+            <p className="text-2x1 font-mono">Geografia</p>
             </div>
             <div className="h-1/2 w-full justify-center text-center flex items-center">
-            <p className="text-2x1 font-mono">A</p>
+            <p className="text-2x1 font-mono">Informatika</p>
             </div>
             </div>
           </div>
