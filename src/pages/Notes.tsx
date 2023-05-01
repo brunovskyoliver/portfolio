@@ -2,6 +2,8 @@ import { SignIn, useUser } from "@clerk/nextjs";
 import Layout from './Layout';
 import Head from 'next/head'
 import { useRouter } from "next/router";
+import Image from 'next/image'
+
 
 
 
@@ -16,21 +18,38 @@ export default function Notes(): JSX.Element {
     setShowSwiper(true);
   };
 
+  const handleReturnClick = () => {
+    setShowSwiper(false);
+  }
+
+
   if (showSwiper) {
     return (
+      <div>
+        <div className="absolute top-4 left-4 z-10">
+          <button className="text-white bg-blue-500 p-2 rounded-lg" onClick={handleReturnClick}>
+            Return
+          </button>
+        </div>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        style={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}
       >
-        <SwiperSlide>
-        <img src="./img/wallpaper.jpg" alt="Slide 1" />
-      </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia1.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia2.jpeg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia3.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia4.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia5.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia6.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia7.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia8.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
+        <SwiperSlide style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex' }}><Image src="/biologia9.jpg" alt="sanka" width="1024" height="1024" /></SwiperSlide>
       </Swiper>
+      </div>
     );
   }
 
